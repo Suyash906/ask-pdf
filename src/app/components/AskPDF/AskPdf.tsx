@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
+import styles from './ask-pdf.module.css';
 
 function AskPDF()   {
     const [pdfFile, setPdfFile] = useState(null);
@@ -45,24 +46,24 @@ function AskPDF()   {
         }
       };
 
-    return (
-        <div>
-          <h1>Ask PDF</h1>
-          <form onSubmit={handleSubmit}>
-            <div>
+      return (
+        <div className={styles['ask-pdf-container']}>
+          <h1 className={styles['ask-pdf-title']}>Ask PDF</h1>
+          <form onSubmit={handleSubmit} className={styles['ask-pdf-form']}>
+            <div className={styles['form-group']}>
               <label>Upload PDF:</label>
               <input type="file" accept="application/pdf" onChange={handleFileChange} />
             </div>
-            <div>
+            <div className={styles['form-group']}>
               <label>Enter Question:</label>
               <input type="text" value={question} onChange={handleQuestionChange} />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" className={styles['ask-pdf-button']}>Submit</button>
           </form>
           {response && (
-            <div>
-              <h2>Response:</h2>
-              <p>{response}</p>
+            <div className={styles['ask-pdf-response-container']}>
+              <h2 className={styles['ask-pdf-response-title']}>Response:</h2>
+              <p className={styles['ask-pdf-response-text']}>{response}</p>
             </div>
           )}
         </div>

@@ -1,0 +1,142 @@
+.ask-pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  min-height: 300px;
+}
+
+.ask-pdf-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #343a40;
+  font-weight: 500;
+}
+
+.ask-pdf-form {
+  display: flex; /* Changed to flex */
+  flex-direction: column; /* Stack items vertically */
+  gap: 1.5rem; /* Spacing between form elements */
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically within each group */
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.form-group input[type="file"] {
+  padding: 0.8rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #0056b3;
+}
+
+.form-group input[type="text"] {
+  padding: 0.8rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="file"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.ask-pdf-button {
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+  font-weight: 500;
+  margin-top: 1.5rem; /* Add some space above the button */
+}
+
+.ask-pdf-button:hover {
+  background-color: #0056b3;
+}
+
+.ask-pdf-response-container {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 600px;
+}
+
+.ask-pdf-response-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.ask-pdf-response-text {
+  color: #495057;
+  line-height: 1.7;
+  font-size: 1rem;
+  white-space: pre-wrap; /* Preserve line breaks in response */
+}
+
+/* Remove the media query that was making it horizontal on larger screens */
+/* @media (min-width: 768px) {
+  .ask-pdf-form {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-group label {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+    width: 150px;
+    text-align: left;
+  }
+} */
